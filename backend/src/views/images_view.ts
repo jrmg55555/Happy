@@ -1,10 +1,10 @@
 import Image from "../models/Image";
 
 export default {
-  render(image: Image ){
+  render(image: Image) {
     return {
-      name: image.id,
-      url : `http://192.168.15.6:3333/uploads/${image.path}`,
+      id: image.id,
+      url: `${process.env.API_URL}/uploads/${image.path}`
     };
   },
 
